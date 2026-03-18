@@ -1,4 +1,4 @@
-package com.example.CadastroAPI;
+package com.example.CadastroAPI.Data;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class DataController {
 
-    @GetMapping("/boasVindas")
+    @GetMapping("/dataRoute")
 
-    public String BoasVindas() {
+    public String DataRoute() {
         return "Essa e a minha primeira rota";
     }
 }

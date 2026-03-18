@@ -1,5 +1,6 @@
-package com.example.CadastroAPI;
+package com.example.CadastroAPI.Data;
 
+import com.example.CadastroAPI.Actions.ActionModel;
 import jakarta.persistence.*;
 
 
@@ -13,6 +14,12 @@ public class DataModel {
     private String nome;
     private  String email;
     private int idade;
+
+    // Um usuário pode estar associado a uma única ação,
+    // porém uma mesma ação pode estar associada a vários usuários.
+    @ManyToOne
+    @JoinColumn(name = "action_id") //Foreing key
+    private ActionModel action;
 
     //Construtor Vazio
     public DataModel() {
