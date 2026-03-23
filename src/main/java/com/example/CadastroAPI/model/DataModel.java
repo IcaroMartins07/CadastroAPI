@@ -28,6 +28,7 @@ public class DataModel {
     // porém uma mesma ação pode estar associada a vários usuários.
     @ManyToOne
     @JoinColumn(name = "action_id") //Foreing key
+
     private ActionModel action;
 
 

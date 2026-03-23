@@ -1,5 +1,7 @@
 package com.example.CadastroAPI.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +27,7 @@ public class ActionModel {
     // Um usuário pode possuir vários registros de DataModel.
     // Cada registro de DataModel pertence a um único usuário.
     @OneToMany (mappedBy = "action")
+    @JsonIgnore
     private List<DataModel> data;
 
 
